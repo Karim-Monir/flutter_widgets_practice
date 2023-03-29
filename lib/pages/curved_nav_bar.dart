@@ -1,6 +1,8 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_widget_practice/pages/gesture_detector.dart';
 import 'package:flutter_widget_practice/pages/sliver_app_bar.dart';
+import 'package:flutter_widget_practice/pages/tab_bar.dart';
 
 class NavBar extends StatelessWidget {
   const NavBar({Key? key}) : super(key: key);
@@ -49,16 +51,16 @@ class NavBar extends StatelessWidget {
               ),
               ListTile(
                 leading: IconButton(onPressed: (){}, icon: const Icon(Icons.home)),
-                title: const Text("Page 2", style: TextStyle(fontSize: 20),),
+                title: const Text("Tab Bar", style: TextStyle(fontSize: 20),),
                 onTap: (){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const SecondPage()));
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const TabBarr()));
                 },
               ),
               ListTile(
                 leading: IconButton(onPressed: (){}, icon: const Icon(Icons.home)),
-                title: const Text("Page 2", style: TextStyle(fontSize: 20),),
+                title: const Text("Gesture Detector", style: TextStyle(fontSize: 20),),
                 onTap: (){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ThirdPage()));
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const GestureDetectorr()));
                 },
               ),
             ],
